@@ -9,8 +9,6 @@ namespace Components.Shooting
     {
         private FirePointComponent _firePointComponent;
 
-        private Rigidbody2D _rigidbody2D;
-
         private Vector3 currentPosition;
         private Vector3 lastPosition;
 
@@ -21,8 +19,6 @@ namespace Components.Shooting
         private void Awake()
         {
             _firePointComponent = this.gameObject.GetComponentInChildren<FirePointComponent>();
-
-            _rigidbody2D = this.gameObject.GetComponent<Rigidbody2D>();
 
             _secondsCount = 1f;
         }

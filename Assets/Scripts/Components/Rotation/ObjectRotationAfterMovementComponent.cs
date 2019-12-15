@@ -1,4 +1,4 @@
-﻿using Components.Moving;
+﻿using Components.Movement;
 using UnityEngine;
 
 namespace Components.Rotation

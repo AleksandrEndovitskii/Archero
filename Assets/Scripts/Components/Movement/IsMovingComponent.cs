@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Components.Moving
+namespace Components.Movement
 {
     [RequireComponent(typeof(Rigidbody2D))]
     public class IsMovingComponent : MonoBehaviour

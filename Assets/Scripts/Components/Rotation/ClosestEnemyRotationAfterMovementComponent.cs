@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using Components.Moving;
+using Components.Movement;
 using Extensions;
 using UnityEngine;
 using Views;
