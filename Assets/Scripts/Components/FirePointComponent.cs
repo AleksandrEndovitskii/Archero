@@ -26,15 +26,7 @@ namespace Components
             _bulletForce = 10f;
         }
 
-        private void Update()
-        {
-            if (UnityEngine.Input.GetButtonDown("Fire1"))
-            {
-                Shoot();
-            }
-        }
-
-        private void Shoot()
+        public void Shoot()
         {
             var bulletInstance = Instantiate(
                 bulletPrefab, 
