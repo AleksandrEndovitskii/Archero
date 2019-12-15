@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Views;
 
-namespace Components
+namespace Components.Shooting
 {
     [RequireComponent(typeof(BoxCollider2D))]
     public class BulletComponent : MonoBehaviour

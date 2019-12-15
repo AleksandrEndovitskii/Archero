@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections;
+using Components.Shooting;
 using UnityEngine;
 using Views;
 
-namespace Components
+namespace Components.Raycast
 {
     public class RaycastHitComponent : MonoBehaviour
     {

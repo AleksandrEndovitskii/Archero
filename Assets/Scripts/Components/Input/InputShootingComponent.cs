@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Components.Shooting;
+using UnityEngine;
 
 namespace Components.Input
 {

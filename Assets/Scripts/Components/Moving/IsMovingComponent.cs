@@ -29,13 +29,13 @@ namespace Components.Moving
 
         private bool _isMoving;
 
-        private Vector3 currentPosition;
-        private Vector3 lastPosition;
+        private Vector3 _currentPosition;
+        private Vector3 _lastPosition;
 
         private void Update()
         {
-            currentPosition = this.gameObject.transform.position;
-            if (currentPosition == lastPosition) // stopped
+            _currentPosition = this.gameObject.transform.position;
+            if (_currentPosition == _lastPosition) // stopped
             {
                 IsMoving = false;
             }
@@ -43,7 +43,7 @@ namespace Components.Moving
             {
                 IsMoving = true;
             }
-            lastPosition = currentPosition;
+            _lastPosition = _currentPosition;
         }
     }
 }

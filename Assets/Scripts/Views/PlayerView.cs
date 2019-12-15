@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Views
+﻿namespace Views
 {
     public class PlayerView : CreatureView
     {

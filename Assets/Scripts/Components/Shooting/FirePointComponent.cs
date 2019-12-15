@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Views;
 
-namespace Components
+namespace Components.Shooting
 {
     public class FirePointComponent : MonoBehaviour
     {
