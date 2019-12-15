@@ -58,5 +58,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerView: {fileID: 5284264705519583432, guid: dae98caf5c00c024996b0ccfc742e8f3,
     type: 3}
-  enemyView: {fileID: -6114540677711717059, guid: 570efa273ef1fd941b53343a997a65fa,
+  enemyView: {fileID: -890612451880194203, guid: dd65f19e21f459c4f9183fbd5d27d43a,
     type: 3}

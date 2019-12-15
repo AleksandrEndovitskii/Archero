@@ -35,7 +35,7 @@ namespace Managers
 
         public void Initialize()
         {
-
+            GameObjectManager.Initialize();
         }
     }
 }
