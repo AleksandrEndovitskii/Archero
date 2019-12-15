@@ -2,7 +2,7 @@
 
 namespace Views
 {
-    public class EnemyView : MonoBehaviour
+    public class EnemyView : CreatureView
     {
 
     }

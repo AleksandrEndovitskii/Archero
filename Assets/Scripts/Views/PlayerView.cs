@@ -2,7 +2,7 @@
 
 namespace Views
 {
-    public class PlayerView : MonoBehaviour
+    public class PlayerView : CreatureView
     {
 
     }
