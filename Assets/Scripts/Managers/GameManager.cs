@@ -2,8 +2,14 @@
 
 namespace Managers
 {
+    [RequireComponent(typeof(GameObjectManager))]
     public class GameManager : MonoBehaviour
     {
+        public GameObjectManager GameObjectManager
+        {
+            get { return this.gameObject.GetComponent<GameObjectManager>(); }
+        }
+
         // static instance of GameManager which allows it to be accessed by any other script 
         public static GameManager Instance;
 
