@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4858374675272679926}
   - component: {fileID: 3149047168080421936}
   - component: {fileID: 3975651738404354992}
-  - component: {fileID: 9127277320058880801}
   - component: {fileID: 6448205816940718098}
+  - component: {fileID: 2796494146496459931}
   m_Layer: 0
   m_Name: CreatureView
   m_TagString: Untagged
@@ -105,18 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &9127277320058880801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 413733740606398489}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d985f0d4c1bc416a8d1844c5e6097241, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &6448205816940718098
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -143,6 +131,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2796494146496459931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413733740606398489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396984284f154508b9d46b152e0a4b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5144647989005128430
 PrefabInstance:
   m_ObjectHideFlags: 0

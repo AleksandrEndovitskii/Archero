@@ -20,7 +20,7 @@ namespace Components
             _secondsCount = 1f;
         }
 
-        void FixedUpdate()
+        private void FixedUpdate()
         {
             var hit = Physics2D.Raycast(transform.position,  transform.up * 1000, Mathf.Infinity);
             if (hit.collider != null) // have a target

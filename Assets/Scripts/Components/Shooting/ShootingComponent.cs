@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Components
+namespace Components.Shooting
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class IdleShootingComponent : MonoBehaviour
+    public class ShootingComponent : MonoBehaviour
     {
         private FirePointComponent _firePointComponent;
 
@@ -32,25 +32,32 @@ namespace Components
             currentPosition = this.gameObject.transform.position;
             if (currentPosition == lastPosition) // stopped
             {
-                if (_shootingCoroutine == null) // not started shooting yet - start it
-                {
-                    _shootingCoroutine = StartCoroutine(RepeatActionEverySecondsCoroutine(
-                        _secondsCount,
-                        () =>
-                        {
-                            _firePointComponent.Shoot(); 
-                        }));
-                }
+                StartShooting();
             }
             else // moving
             {
-                if (_shootingCoroutine != null) // started shooting - stop it
-                {
-                    StopCoroutine(_shootingCoroutine);
-                    _shootingCoroutine = null;
-                }
+                StopShooting();
             }
             lastPosition = currentPosition;
+        }
+
+        private void StartShooting()
+        {
+            if (_shootingCoroutine == null) // not started shooting yet - start it
+            {
+                _shootingCoroutine = StartCoroutine(RepeatActionEverySecondsCoroutine(
+                    _secondsCount,
+                    () => { _firePointComponent.Shoot(); }));
+            }
+        }
+
+        private void StopShooting()
+        {
+            if (_shootingCoroutine != null) // started shooting - stop it
+            {
+                StopCoroutine(_shootingCoroutine);
+                _shootingCoroutine = null;
+            }
         }
 
         private IEnumerator RepeatActionEverySecondsCoroutine(float secondsCount, Action action)
