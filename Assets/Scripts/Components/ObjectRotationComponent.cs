@@ -13,7 +13,7 @@ namespace Components
         {
             _target = FindObjectOfType<PlayerView>().transform;
 
-            _speed = 10f;
+            _speed = 1f;
         }
 
         private void Update()

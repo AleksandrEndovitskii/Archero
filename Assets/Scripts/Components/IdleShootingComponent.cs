@@ -16,7 +16,7 @@ namespace Components
 
         private float _secondsCount;
 
-        private Coroutine shootingCoroutine;
+        private Coroutine _shootingCoroutine;
 
         private void Awake()
         {
@@ -32,9 +32,9 @@ namespace Components
             currentPosition = this.gameObject.transform.position;
             if (currentPosition == lastPosition) // stopped
             {
-                if (shootingCoroutine == null) // not started shooting eat - start it
+                if (_shootingCoroutine == null) // not started shooting yet - start it
                 {
-                    shootingCoroutine = StartCoroutine(RepeatActionEverySecondsCoroutine(
+                    _shootingCoroutine = StartCoroutine(RepeatActionEverySecondsCoroutine(
                         _secondsCount,
                         () =>
                         {
@@ -44,10 +44,10 @@ namespace Components
             }
             else // moving
             {
-                if (shootingCoroutine != null) // started shooting - stop it
+                if (_shootingCoroutine != null) // started shooting - stop it
                 {
-                    StopCoroutine(shootingCoroutine);
-                    shootingCoroutine = null;
+                    StopCoroutine(_shootingCoroutine);
+                    _shootingCoroutine = null;
                 }
             }
             lastPosition = currentPosition;
