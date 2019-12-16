@@ -8,15 +8,15 @@ namespace Managers
     {
 #pragma warning disable 0649
         [SerializeField]
-        private PlayerSpawnPointComponent playerSpawnPointComponent;
+        private SpawnPointComponent playerSpawnPointComponent;
         [SerializeField]
-        private EnemySpawnPointComponent enemySpawnPointComponent;
+        private SpawnPointComponent enemySpawnPointComponent;
 #pragma warning restore 0649
 
         [NonSerialized]
-        public PlayerSpawnPointComponent PlayerSpawnPointComponentInstance;
+        public SpawnPointComponent PlayerSpawnPointComponentInstance;
         [NonSerialized]
-        public EnemySpawnPointComponent EnemySpawnPointComponentInstance;
+        public SpawnPointComponent EnemySpawnPointComponentInstance;
 
         public void Initialize()
         {

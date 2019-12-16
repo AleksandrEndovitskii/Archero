@@ -1,20 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6355023877626978940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5763415114456841108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16416913607a4479915e3dfc841ec3cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  creatureView: {fileID: -890612451880194203, guid: dd65f19e21f459c4f9183fbd5d27d43a,
-    type: 3}
---- !u!1001 &4480070045465526578
+--- !u!1001 &8862191486557688772
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -76,17 +62,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2208510218001331182, guid: 35ac539929050c3459221ef7ba3d12f7,
+        type: 3}
+      propertyPath: SpawnCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2208510218001331182, guid: 35ac539929050c3459221ef7ba3d12f7,
+        type: 3}
+      propertyPath: creatureView
+      value: 
+      objectReference: {fileID: -890612451880194203, guid: dd65f19e21f459c4f9183fbd5d27d43a,
+        type: 3}
+    - target: {fileID: 2208510218001331182, guid: 35ac539929050c3459221ef7ba3d12f7,
+        type: 3}
+      propertyPath: spawnCount
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8203206094240512678, guid: 35ac539929050c3459221ef7ba3d12f7,
         type: 3}
       propertyPath: m_Name
       value: EnemySpawnPoint
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2208510218001331182, guid: 35ac539929050c3459221ef7ba3d12f7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35ac539929050c3459221ef7ba3d12f7, type: 3}
---- !u!1 &5763415114456841108 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8203206094240512678, guid: 35ac539929050c3459221ef7ba3d12f7,
-    type: 3}
-  m_PrefabInstance: {fileID: 4480070045465526578}
-  m_PrefabAsset: {fileID: 0}
