@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3975651738404354992}
   - component: {fileID: 6448205816940718098}
   - component: {fileID: 2796494146496459931}
+  - component: {fileID: -2617209157060898600}
   m_Layer: 0
   m_Name: CreatureView
   m_TagString: Untagged
@@ -141,6 +142,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 396984284f154508b9d46b152e0a4b48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-2617209157060898600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413733740606398489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b929af05df9d48c45ae5a97a869e0c05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &5144647989005128430

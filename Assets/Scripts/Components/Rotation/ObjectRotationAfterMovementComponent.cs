@@ -19,6 +19,8 @@ namespace Components.Rotation
             if (_isMovingComponent == null)
             {
                 Debug.LogError("No IsMovingComponent on this object was found.");
+
+                return;
             }
 
             IsMovingChanged(_isMovingComponent.IsMoving);

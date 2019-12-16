@@ -1,66 +1,51 @@
 ﻿using System;
-using System.Collections;
-using Components.Shooting;
 using UnityEngine;
-using Views;
 
 namespace Components.Raycast
 {
     public class RaycastHitComponent : MonoBehaviour
     {
-        private FirePointComponent _firePointComponent;
+        public Action<GameObject> TargetChanged = delegate { };
 
-        private float _secondsCount;
-
-        private Coroutine _shootingCoroutine;
-
-        private void Awake()
+        public GameObject Target
         {
-            _firePointComponent = this.gameObject.GetComponentInChildren<FirePointComponent>();
+            get
+            {
+                return _target;
+            }
+            set
+            {
+                if (_target == value)
+                {
+                    return;
+                }
 
-            _secondsCount = 1f;
+                _target = value;
+
+                TargetChanged.Invoke(_target);
+            }
         }
+
+        private GameObject _target;
 
         private void FixedUpdate()
         {
             var hit = Physics2D.Raycast(transform.position,  transform.up * 1000, Mathf.Infinity);
             if (hit.collider != null) // have a target
             {
-                var playerView = hit.collider.gameObject.GetComponent<PlayerView>();
-                if (playerView != null) // have clean view on player
+                var o = hit.collider.gameObject;
+                if (o != null) // have clean view on player
                 {
                     Debug.DrawRay(transform.position, transform.up * hit.distance, Color.red);
 
-                    if (_shootingCoroutine == null) // not started shooting yet - start it
-                    {
-                        _shootingCoroutine = StartCoroutine(RepeatActionEverySecondsCoroutine(
-                            _secondsCount,
-                            () =>
-                            {
-                                _firePointComponent.Shoot();
-                            }));
-                    }
+                    Target = o;
                 }
             }
             else // no target
             {
                 Debug.DrawRay(transform.position, transform.up * 1000, Color.white);
 
-                if (_shootingCoroutine != null) // started shooting - stop it
-                {
-                    StopCoroutine(_shootingCoroutine);
-                    _shootingCoroutine = null;
-                }
-            }
-        }
-
-        private IEnumerator RepeatActionEverySecondsCoroutine(float secondsCount, Action action)
-        {
-            while (enabled)
-            {
-                yield return new WaitForSeconds(secondsCount);
-
-                action.Invoke();
+                Target = null;
             }
         }
     }
