@@ -1,6 +1,6 @@
 ﻿using System;
+using Components.SpawnPoints;
 using UnityEngine;
-using Views;
 
 namespace Managers
 {
@@ -8,20 +8,26 @@ namespace Managers
     {
 #pragma warning disable 0649
         [SerializeField]
-        private PlayerView playerView;
+        private PlayerSpawnPointComponent playerSpawnPointComponent;
         [SerializeField]
-        private EnemyView enemyView;
+        private EnemySpawnPointComponent enemySpawnPointComponent;
 #pragma warning restore 0649
 
         [NonSerialized]
-        public PlayerView PlayerViewInstance;
+        public PlayerSpawnPointComponent PlayerSpawnPointComponentInstance;
         [NonSerialized]
-        public EnemyView EnemyViewInstance;
+        public EnemySpawnPointComponent EnemySpawnPointComponentInstance;
 
         public void Initialize()
         {
-            PlayerViewInstance = Instantiate(playerView);
-            EnemyViewInstance = Instantiate(enemyView);
+            PlayerSpawnPointComponentInstance = Instantiate(
+                playerSpawnPointComponent,
+                new Vector3(-10f, -10f, 0f),
+                Quaternion.identity);
+            EnemySpawnPointComponentInstance = Instantiate(
+                enemySpawnPointComponent,
+                new Vector3(10f, 10f, 0f),
+                Quaternion.identity);
         }
     }
 }

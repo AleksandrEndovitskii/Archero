@@ -56,7 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04148c2510400d940a3d2a62bef51afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerView: {fileID: -1392282821701747699, guid: 48be4f6ab7e8a1045a6d74a0dfa77f90,
+  playerSpawnPointComponent: {fileID: 2208510218001331182, guid: 35ac539929050c3459221ef7ba3d12f7,
     type: 3}
-  enemyView: {fileID: -890612451880194203, guid: dd65f19e21f459c4f9183fbd5d27d43a,
+  enemySpawnPointComponent: {fileID: -6355023877626978940, guid: 738ae9a515aabea4d91ad9a29ebb50bb,
     type: 3}
